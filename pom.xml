@@ -12,13 +12,17 @@
         <module>qa-utils</module>
         <module>configuration</module>
         <module>rest-api</module>
+        <module>qa-comparison-tool</module>
     </modules>
     <properties>
         <java.version>11</java.version>
 
         <commons.configuration2.version>2.5</commons.configuration2.version>
         <commons.beanutils.version>1.9.2</commons.beanutils.version>
-        <commons.lang3.version>3.9</commons.lang3.version>
+        <commons.lang3.version>3.10</commons.lang3.version>
+        <commons.io.version>1.3.2</commons.io.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <assertj.core.version>3.15.0</assertj.core.version>
         <lombok.version>1.18.8</lombok.version>
         <testng.version>7.0.0</testng.version>
         <logback.version>1.2.3</logback.version>
@@ -120,6 +124,14 @@
                 <optional>false</optional>
             </dependency>
 
+            <!-- Common testing tools -->
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.core.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
             <!-- Retrofit -->
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
@@ -139,7 +151,17 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons.lang3.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons.collections.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

@@ -11,6 +11,7 @@
 | Переделан DefaultRequestInterceptors.                                     |
 | Добален логгер запросов в аллюр отчёт                                     |
 | Добален интерсептор AddHeaderInterceptor для добавления хедера к запросу  |
+| Добавлен новый модуль qa-comparison-tool                                  |
 
 ## Bug fix
 |                               `Description`                               |
