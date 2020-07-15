@@ -10,7 +10,7 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <root level="info">Can't find any configuration
+    <root level="info">
         <appender-ref ref="CONSOLE"/>
     </root>
 
