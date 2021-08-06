@@ -9,8 +9,11 @@ import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.File;
+
 @Slf4j
 public class JsonUtils {
+
     private static ObjectMapper defaultMapper = new ObjectMapper()
             .setSerializationInclusion(JsonInclude.Include.NON_NULL)
             .setAnnotationIntrospector(new JacksonAnnotationIntrospector() {
@@ -83,6 +86,15 @@ public class JsonUtils {
         return null;
     }
 
+    public static <T> T tryParse(Class<T> clazz, File jsonfile) {
+        try {
+            return defaultMapper.readValue(jsonfile, clazz);
+        } catch (Throwable e) {
+            log.warn("can't parse file to {}:\n{}", clazz.getName(), jsonfile.getName());
+        }
+        return null;
+    }
+
     public static <T> T tryParse(TypeReference<T> typeReference, String jsonString) {
         try {
             return defaultMapper.readValue(jsonString, typeReference);
@@ -91,4 +103,5 @@ public class JsonUtils {
         }
         return null;
     }
+
 }
