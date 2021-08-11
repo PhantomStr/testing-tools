@@ -4,7 +4,7 @@
 ## Features
 |                               `Description`                               |
 | ------------------------------------------------------------------------- |
-|                                                                           |
+| deploy into maven preparing                                               |
 
 ## Bug fix
 |                               `Description`                               |
