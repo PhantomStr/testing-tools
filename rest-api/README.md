@@ -78,16 +78,17 @@ public class TestClass {
 To include core as a dependency, add it to your <dependencies> block like so:
 
   ```xml
-    <project>
-        <dependencies>
-            <!-- Testing core -->
-            <dependency>
-                <groupId>com.phantomstr.testing.tool</groupId>
-                <artifactId>rest-api</artifactId>
-                <version>1.2.0</version>
-            </dependency>
-        </dependencies>
-    </project>
+
+<project>
+  <dependencies>
+    <!-- Testing core -->
+    <dependency>
+      <groupId>io.github.phantomstr.testing-tools</groupId>
+      <artifactId>rest-api</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+  </dependencies>
+</project>
   ```
 
 ### Prerequisites

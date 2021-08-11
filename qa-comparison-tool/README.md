@@ -140,7 +140,7 @@
         <dependencies>
             <!-- Testing core -->
             <dependency>
-                <groupId>com.phantomstr.testing.tool</groupId>
+                <groupId>io.github.phantomstr.testing-tools</groupId>
                 <artifactId>qa-comparison-tool</artifactId>
                 <version>1.2.0</version>
             </dependency>
