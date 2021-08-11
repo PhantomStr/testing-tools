@@ -26,6 +26,10 @@ public class FunctionUtil {
         return Arrays.stream(array).map(mapFunction).map(subMapFunction).filter(Objects::nonNull).collect(Collectors.toList());
     }
 
+    public static <T> List<T> filter(Collection<T> collection, Predicate<T> predicate) {
+        return collection.stream().filter(predicate).collect(Collectors.toList());
+    }
+
     public static <T> long count(Collection<T> collection, Predicate<T> predicate) {
         return collection.stream().filter(predicate).count();
     }
