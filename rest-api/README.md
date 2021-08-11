@@ -50,7 +50,7 @@ public interface IconsService {
 
 public class TestClass {
     @Test
-    public void test() throws IOException{
+    public void test() {
         Rest config = new TestConfig();
         IconsService service = new ServiceFactory(config)
             .getService(IconsService.class);
@@ -79,15 +79,12 @@ To include core as a dependency, add it to your <dependencies> block like so:
 
   ```xml
     <project>
-        <properties>
-            <com.phantomstr.testing.tool.version>1.1.0</com.phantomstr.testing.tool.version>
-        </properties>
         <dependencies>
             <!-- Testing core -->
             <dependency>
                 <groupId>com.phantomstr.testing.tool</groupId>
                 <artifactId>rest-api</artifactId>
-                <version>${com.phantomstr.testing.tool.version}</version>
+                <version>1.2.0</version>
             </dependency>
         </dependencies>
     </project>

@@ -102,15 +102,12 @@ public class ConfigUtils extends ConfigProvider {
   To include core as a dependency, add it to your <dependencies> block like so:
   ```xml
     <project>
-        <properties>
-            <com.phantomstr.testing.tool.version>1.1.0</com.phantomstr.testing.tool.version.version>
-        </properties>
         <dependencies>
             <!-- Testing core -->
             <dependency>
                 <groupId>com.phantomstr.testing.tool</groupId>
                 <artifactId>configuration</artifactId>
-                <version>${com.phantomstr.testing.tool.version}</version>
+                <version>1.2.0</version>
             </dependency>
         </dependencies>
     </project>

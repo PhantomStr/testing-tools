@@ -51,7 +51,7 @@
 
     public class TestClass {
         @Test(expectedExceptions = AssertionError.class)
-        public void test() throws IOException{
+        public void test() {
             String sourceEnv = "env-1";
             String targetEnv = "env-2";
             UUID runId = UUID.fromString("7761f76b-67ad-46f4-8826-c68fe991d1ae");
@@ -142,7 +142,7 @@
             <dependency>
                 <groupId>com.phantomstr.testing.tool</groupId>
                 <artifactId>qa-comparison-tool</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
+                <version>1.2.0</version>
             </dependency>
         </dependencies>
     </project>
