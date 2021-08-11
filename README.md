@@ -1,5 +1,5 @@
 # testing-tools
-Modules that make your testing process easier.
+Modules that make your testing process easier. <br>
 [about configuration module](https://github.com/PhantomStr/testing-tools/tree/master/configuration#readme) <br>
 [about comparison tool module](https://github.com/PhantomStr/testing-tools/tree/master/qa-comparison-tool#readme) <br>
 [about rest-api module](https://github.com/PhantomStr/testing-tools/tree/master/rest-api#readme) <br>
