@@ -107,7 +107,7 @@ public class ConfigUtils extends ConfigProvider {
             <dependency>
                 <groupId>com.phantomstr.testing.tool</groupId>
                 <artifactId>configuration</artifactId>
-                <version>1.2.0</version>
+                <version>1.3.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </project>

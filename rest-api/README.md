@@ -84,7 +84,7 @@ To include core as a dependency, add it to your <dependencies> block like so:
             <dependency>
                 <groupId>com.phantomstr.testing.tool</groupId>
                 <artifactId>rest-api</artifactId>
-                <version>1.2.0</version>
+                <version>1.3.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </project>
