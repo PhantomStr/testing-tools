@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FunctionUtil {
     public static <T, R> List<R> toList(Collection<T> collection, Function<T, R> mapFunction) {
@@ -26,8 +27,13 @@ public class FunctionUtil {
         return Arrays.stream(array).map(mapFunction).map(subMapFunction).filter(Objects::nonNull).collect(Collectors.toList());
     }
 
-    public static <T> List<T> filter(Collection<T> collection, Predicate<T> predicate) {
-        return collection.stream().filter(predicate).collect(Collectors.toList());
+    public static <T> List<T> filter(Collection<T> collection, Predicate<T>... predicates) {
+        Objects.requireNonNull(predicates);
+        Stream<T> stream = collection.stream();
+        for (Predicate<T> predicate : predicates) {
+            stream = stream.filter(predicate);
+        }
+        return stream.collect(Collectors.toList());
     }
 
     public static <T> long count(Collection<T> collection, Predicate<T> predicate) {
