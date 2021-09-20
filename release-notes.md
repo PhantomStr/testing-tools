@@ -1,12 +1,16 @@
-
 # Release Notes
-# 1.3.0-SNAPSHOT
+
+# 1.3.1 - 20.09.2021
+
 ## Features
+
 |                               `Description`                               |
 | ------------------------------------------------------------------------- |
+| renamed package by convention                                               |
 | deploy into maven preparing                                               |
 
 ## Bug fix
+
 |                               `Description`                               |
 | ------------------------------------------------------------------------- |
 |                                                                           |

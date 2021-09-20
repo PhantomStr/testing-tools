@@ -142,7 +142,7 @@
             <dependency>
                 <groupId>io.github.phantomstr.testing-tools</groupId>
                 <artifactId>qa-comparison-tool</artifactId>
-                <version>1.3.0</version>
+                <version>1.3.1</version>
             </dependency>
         </dependencies>
     </project>
