@@ -14,7 +14,7 @@ structure of configuration files:
  
 ```
 
-this structure can be changed in config.properties file
+this structure can be changed in configuration.properties file
 ```properties
  config.env.root=conf/env
  env.name=DEFAULT

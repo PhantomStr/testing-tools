@@ -6,7 +6,7 @@
         </layout>
     </appender>
 
-    <logger name="com.phantomstr.testing.tool.config" level="info" additivity="false">
+    <logger name="io.github.phantomstr.testing.tool.config" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 
