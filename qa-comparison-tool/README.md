@@ -10,16 +10,16 @@
   └──reports                              
      ├──env-1 
      │  └──7761f76b-67ad-46f4-8826-c68fe991d1ae.xml       
-     │      <prodect>
+     │      <project>
      │          <name>Tove</name>
      │          <updated>2020-04-22T21:42:12+03:00</updated>
-     │      </prodect>
+     │      </project>
      └──env-2
         └──7761f76b-67ad-46f4-8826-c68fe991d1ae.xml
-            <prodect>
+            <project>
                 <name>Tove</name>
                 <updated>2019-05-23T20:56:17+03:00</updated>
-            </prodect>
+            </project>
 ```
 Без рулов будет выбрасывать любые несовпадения в файлах
 ```java
@@ -27,7 +27,7 @@
 // -------------------------------- rule ------------------------------------------
     public class ProjectUpdatedRule extends AbstractTemplateMatcher {
         public ProjectUpdatedRule() {
-            super("^/prodect\\[\\d*]/updated\\[\\d*]/text\\(\\)\\[\\d*]$");
+            super("^/project\\[\\d*]/updated\\[\\d*]/text\\(\\)\\[\\d*]$");
         }
 
         @Override
