@@ -32,7 +32,7 @@
         <converter.jackson.version>2.6.1</converter.jackson.version>
         <retrofit.version>2.6.1</retrofit.version>
         <logging.interceptor.version>3.9.0</logging.interceptor.version>
-        <jackson.databind.version>2.12.6.1</jackson.databind.version>
+        <jackson.databind.version>2.12.7.1</jackson.databind.version>
         <maven.site.plugin.version>3.7.1</maven.site.plugin.version>
         <maven.project.info.reports.plugin.version>3.0.0</maven.project.info.reports.plugin.version>
         <mave.javadoc.plugin.version>3.1.1</mave.javadoc.plugin.version>
