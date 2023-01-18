@@ -21,7 +21,7 @@ import static java.util.Objects.nonNull;
 
 @Slf4j
 public class ResponseUtils {
-    public static String getRequestDescription(Response response) {
+    public static String getRequestDescription(Response<?> response) {
         return getRequestDescription(response.raw());
     }
 
@@ -67,7 +67,7 @@ public class ResponseUtils {
         if (nonNull(response.body()) && nonNull(response.body().source())) {
             BufferedSource source = response.body().source();
             source.request(Long.MAX_VALUE);
-            Buffer buffer = source.buffer();
+            Buffer buffer = source.getBuffer();
             return buffer.clone().readString(StandardCharsets.UTF_8);
         }
         return "";

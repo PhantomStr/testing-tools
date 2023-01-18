@@ -5,6 +5,9 @@ import okhttp3.HttpUrl;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import static org.testng.Assert.assertEquals;
 
 public class ApiUrlTest {
@@ -33,7 +36,12 @@ public class ApiUrlTest {
 
     @Test(dataProvider = "correctUrls")
     public void shouldReturnCorrectUrl(String baseUrl, String apiRoot, String expectedUrl) {
-        assertEquals(new ApiUrl(baseUrl, apiRoot).getUrl(), HttpUrl.get(expectedUrl));
+        try {
+            URL url = new URL(expectedUrl);
+            assertEquals(new ApiUrl(baseUrl, apiRoot).getUrl(), HttpUrl.get(url));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test(dataProvider = "wrongUrls", expectedExceptions = IllegalArgumentException.class)

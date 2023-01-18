@@ -1,12 +1,28 @@
 # Release Notes
 
+# 1.3.2
+
+## Features
+
+| `Description`               |
+|-----------------------------|
+| Dependency versions updated |
+
+## Bug fix
+
+|                               `Description`                               |
+| ------------------------------------------------------------------------- |
+|                                                                           |
+
+# Release Notes
+
 # 1.3.1 - 20.09.2021
 
 ## Features
 
 |                               `Description`                               |
 | ------------------------------------------------------------------------- |
-| renamed package by convention                                               |
+| renamed package by convention                                             |
 | deploy into maven preparing                                               |
 
 ## Bug fix
@@ -17,25 +33,25 @@
 
 # 1.2.0 - 11.08.2021
 ## Features
-|                               `Description`                               |
-| ------------------------------------------------------------------------- |
-| Generic конфигурация для ConverterFactoryManager                          |
-| Добавлен поиск ресурсов по имени                                          |
-| Добавлен параметр INDENT_OUTPUT в ConverterConfig                         |
-| Добавлен класс ResponseUtils                                              |
-| Добавлен параметр ACCEPT_CASE_INSENSITIVE_ENUMS в ConverterConfig         |
-| Переделан DefaultRequestInterceptors.                                     |
-| Добален логгер запросов в аллюр отчёт                                     |
-| Добален интерсептор AddHeaderInterceptor для добавления хедера к запросу  |
-| Добавлен новый модуль qa-comparison-tool                                  |
+| `Description`                                                  |
+|----------------------------------------------------------------|
+| Generic configuration for ConverterFactoryManager              |
+| Resources searching by name                                    |
+| New parameter INDENT_OUTPUT in ConverterConfig                 |
+| ResponseUtils are added                                        |
+| New parameter ACCEPT_CASE_INSENSITIVE_ENUMS in ConverterConfig |
+| DefaultRequestInterceptors updated.                            |
+| Request/response logger for allure report                      |
+| New interceptor AddHeaderInterceptor                           |
+| New module qa-comparison-tool                                  |
 
 ## Bug fix
-|                               `Description`                               |
-| ------------------------------------------------------------------------- |
-| Fix JsonUtils package name                                                |
-| fix WARN in ResponseUtils "IllegalArgumentException: charset == null"     |
-| исправлено логгирование мультипарт респонза                               |
-| Конфликт версий jdk для библиотек                                         |
+| `Description`                                                         |
+|-----------------------------------------------------------------------|
+| Fix JsonUtils package name                                            |
+| fix WARN in ResponseUtils "IllegalArgumentException: charset == null" |
+| fixed  multipart response logging                                     |
+| jdk libs version conflict resolved                                    |
 
 # 1.1.0 - 13.01.2020
 ## Features

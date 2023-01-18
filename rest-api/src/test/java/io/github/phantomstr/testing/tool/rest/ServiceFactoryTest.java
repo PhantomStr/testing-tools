@@ -70,7 +70,7 @@ public class ServiceFactoryTest {
                         .protocol(Protocol.HTTP_1_0)
                         .code(200)
                         .message(testText)
-                        .body(ResponseBody.create(MediaType.get("text/plain"), testText))
+                        .body(ResponseBody.create(MediaType.parse("text/plain"), testText))
                         .build());
 
         Response<ResponseBody> response = new ServiceFactory(config, requestInterceptors)

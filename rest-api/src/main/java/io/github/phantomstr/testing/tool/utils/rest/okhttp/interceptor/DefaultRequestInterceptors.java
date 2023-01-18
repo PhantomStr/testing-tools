@@ -8,13 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+@SuppressWarnings("unused")
 @Slf4j
 @Getter
 public class DefaultRequestInterceptors<SELF extends DefaultRequestInterceptors<SELF>> implements RequestInterceptors {
     @Getter(AccessLevel.NONE)
     protected final SELF myself;
-    private Properties interceptorProperties = new Properties();
-    private List<RequestInterceptor> interceptors = new ArrayList<>();
+    private final Properties interceptorProperties = new Properties();
+    private final List<RequestInterceptor> interceptors = new ArrayList<>();
 
     public DefaultRequestInterceptors() {this(DefaultRequestInterceptors.class);}
 
@@ -23,8 +24,8 @@ public class DefaultRequestInterceptors<SELF extends DefaultRequestInterceptors<
         this.myself = (SELF) selfType.cast(this);
     }
 
-    public static DefaultRequestInterceptors loggingOnly() {
-        return new DefaultRequestInterceptors()
+    public static DefaultRequestInterceptors<?> loggingOnly() {
+        return new DefaultRequestInterceptors<>()
                 .withLoggingInConsole()
                 .withLoggingInAllure();
     }

@@ -3,6 +3,8 @@ package io.github.phantomstr.testing.tool.utils.rest;
 import lombok.NoArgsConstructor;
 import okhttp3.HttpUrl;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,7 +41,13 @@ public class ApiUrl {
             throw new IllegalArgumentException("api root must be relative");
         }
         String stripped = strip(host + "/" + path, slashes) + "/";
-        return HttpUrl.get(stripped);
+
+        try {
+            URL url = new URL(stripped);
+            return HttpUrl.get(url);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

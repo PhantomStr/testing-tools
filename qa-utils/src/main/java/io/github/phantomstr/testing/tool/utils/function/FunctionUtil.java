@@ -10,6 +10,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@SuppressWarnings("unused")
 public class FunctionUtil {
     public static <T, R> List<R> toList(Collection<T> collection, Function<T, R> mapFunction) {
         return collection.stream().map(mapFunction).filter(Objects::nonNull).collect(Collectors.toList());
@@ -27,6 +28,7 @@ public class FunctionUtil {
         return Arrays.stream(array).map(mapFunction).map(subMapFunction).filter(Objects::nonNull).collect(Collectors.toList());
     }
 
+    @SafeVarargs
     public static <T> List<T> filter(Collection<T> collection, Predicate<T>... predicates) {
         Objects.requireNonNull(predicates);
         Stream<T> stream = collection.stream();

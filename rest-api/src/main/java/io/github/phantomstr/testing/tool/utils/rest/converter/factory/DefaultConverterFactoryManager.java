@@ -1,10 +1,7 @@
 package io.github.phantomstr.testing.tool.utils.rest.converter.factory;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.fasterxml.jackson.databind.introspect.AnnotatedClass;
 import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
@@ -83,7 +80,9 @@ public class DefaultConverterFactoryManager implements ConverterFactoryManager<C
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         }
         if (config.acceptCaseInsensitiveEnums()) {
-            objectMapper.enable(MapperFeature.ACCEPT_CASE_INSENSITIVE_ENUMS);
+            final DeserializationConfig originalConfig = objectMapper.getDeserializationConfig();
+            final DeserializationConfig newConfig = originalConfig.with(MapperFeature.ACCEPT_CASE_INSENSITIVE_ENUMS);
+            objectMapper.setConfig(newConfig);
         }
         return JacksonConverterFactory.create(objectMapper);
     }

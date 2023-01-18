@@ -38,6 +38,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>../target/site/rest-api</outputDirectory>
+                </configuration>
             </plugin>
 
             <plugin>

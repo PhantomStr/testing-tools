@@ -12,7 +12,17 @@
     <properties>
         <icu4j.version>61.1</icu4j.version>
     </properties>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>../target/site/qa-utils</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
