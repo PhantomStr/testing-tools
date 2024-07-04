@@ -13,16 +13,16 @@
         <module>qa-comparison-tool</module>
     </modules>
     <properties>
-        <java.version>11</java.version>
+        <java.version>22</java.version>
 
         <commons.configuration2.version>2.10.1</commons.configuration2.version>
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
-        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <commons.lang3.version>3.14.0</commons.lang3.version>
         <commons.io.version>2.11.0</commons.io.version>
         <commons.collections.version>3.2.2</commons.collections.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <assertj.core.version>3.24.2</assertj.core.version>
-        <lombok.version>1.18.24</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <testng.version> 7.7.1</testng.version>
         <logback.version>1.4.12</logback.version>
         <slf4j.version>2.0.6</slf4j.version>
